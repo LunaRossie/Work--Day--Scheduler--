@@ -1,21 +1,56 @@
 
-// moment
-const moment = document.querySelector("moment");
-console.log (moment);
+let hour8 = $('#8');
+let hour9 = $('#9');
+let hour10 = $('#10');
+let hour11 = $('#11');
+let hour12 = $('#12');
+let hour1 = $('#1');
+let hour2 = $('#2');
+let hour3 = $('#3');
+let time = moment ();
 
-let yearChosen = new Date().getFullYear(); // 2022
-let monthChosen = new Date().getMonth(); // 11
+function setPlanner() {
+    $("currentDay").text(moment().format("dddd, MMMM, Do YYYY"));
+    $(."time-block").each(function() {
+        let id = $(this).attr("id");
+        let schedule = localStorage.getItem(id);
+        if (schedule !== null) {
+            $(this).children('.schedule').val(schedule);
+        }
+    
+});
 
-function getNumberOfDays(year, month)  {
-console.log(year, month);
-let numDays = new Date (year, month + 1, 0).getDate();
-return numDays;
 }
 
-console.log(getNumberOfDays)(2022, 1)();
-
+setPlanner();
 var saveButton = $(".saveBtn");
-console.log (saveBtn);
+console.log (saveButton);
+
+saveButton.on('click', function(){
+    let time =$(this).parent().attr('id');
+    let schedule = $(this).siblings('.schedule').val();
+    localStorage.setItem(time, schedule);
+});
+
+function pastPresentFuture() {
+    hour = time.hours();
+    $('time-block').each(function () {
+        let thisHour = parseInt($(this).attr('id'));
+
+        if (thisHour > hour) {
+            $(this).addClass('future');
+        }
+        else if (thisHour === hour) {
+            $(this).addClass('present');
+        
+        }
+        else {
+            $(this).addClass('past');
+        
+        }
+    })
+}
+pastPresentFuture();
 
 
 
