@@ -14,7 +14,7 @@ Workday planning can be used by companies to improve processes on how to better 
 
 ## Instruction
 
-The user must create a basic repository, and clone the repo to vscode. 
+The user must create a basic repository, and clone the repo to vscode. The project contains moment.js and jQuery to set up a work day planner. In order to set up the planner, HTML, local storage, CSS, and JavaScript are the tools to identify past, current, and future hours.
 
 ## Github
 
@@ -26,7 +26,6 @@ https://github.com/LunaRossie/Work--Day--Scheduler--
 ## Video Link
 
  
-
 
  ## Questions
 
