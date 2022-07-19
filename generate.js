@@ -22,6 +22,14 @@ function setPlanner() {
 
 }
 
+// // function updateColor() {
+//     let hour = new Date().getHours();
+//     for (let i = 8 ; i <=15; i++ ) {
+//     }
+
+
+}
+
 setPlanner();
 var saveButton = $(".saveBtn");
 console.log (saveButton);
