@@ -23,19 +23,12 @@ https://github.com/LunaRossie/Work--Day--Scheduler--
 ## Deployed Website
 
 
+
 ## Video Link
 
- 
 
  ## Questions
 
 If you have any questions regarding this project, please reach out via email "Terminalbash2022@outlook.com". https://github.com/LunaRossie/Work--Day--Scheduler--
 
 
-
-<link rel= "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="[Moment.js]" href="https://momentjs.com/">
-
-<script src="generate.js"></script>
-
-<script src="Library/moment/moment.min.js"></script>
