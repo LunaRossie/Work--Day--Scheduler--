@@ -1,5 +1,4 @@
 
-let hour8 = $('#8');
 let hour9 = $('#9');
 let hour10 = $('#10');
 let hour11 = $('#11');
@@ -7,11 +6,13 @@ let hour12 = $('#12');
 let hour1 = $('#1');
 let hour2 = $('#2');
 let hour3 = $('#3');
-let time = moment ();
+let hour4 = $('#4');
+let hour5 = $("#5")
+let time = moment();
 
 function setPlanner() {
     $("currentDay").text(moment().format("dddd, MMMM, Do YYYY"));
-    $(."time-block").each(function() {
+    $("time-block").each(function() {
         let id = $(this).attr("id");
         let schedule = localStorage.getItem(id);
         if (schedule !== null) {
@@ -28,7 +29,7 @@ function setPlanner() {
 //     }
 
 
-}
+
 
 setPlanner();
 var saveButton = $(".saveBtn");
@@ -42,8 +43,14 @@ saveButton.on('click', function(){
 
 function pastPresentFuture() {
     hour = time.hours();
-    $('time-block').each(function () {
+    hour = 9
+    hour = 10
+    hour = 11
+    hour = 12
+    hour = 13
+    $('.time-block input').each(function () {
         let thisHour = parseInt($(this).attr('id'));
+        console.log({thisHour,hour, id:$(this).attr('id')})
 
         if (thisHour > hour) {
             $(this).addClass('future');
